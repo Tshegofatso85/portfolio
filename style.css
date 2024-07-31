@@ -388,7 +388,7 @@ span {
   align-items: center;
   justify-content: center;
   background-color: var(--main-color);
-  height: 600px;
+  height: 450px;
   border-radius: 3rem;
   border: 5px solid transparent;
   cursor: pointer;
@@ -420,4 +420,9 @@ span {
 
 .services-info i {
   font-size: 8rem;
+}
+
+.services-info p {
+  font-size: 1.4rem;
+  margin: 1rem 0 2rem;
 }
