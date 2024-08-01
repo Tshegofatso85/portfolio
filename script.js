@@ -26,3 +26,32 @@ menuIcon.onclick = () => {
   menuIcon.classList.toggle("bx-x");
   navbar.classList.toggle("active");
 };
+
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+    const formData = new FormData(this);
+
+    fetch(this.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          document.getElementById("form-message").innerHTML =
+            "Thank you for your message!";
+          this.reset();
+        } else {
+          document.getElementById("form-message").innerHTML =
+            "Oops! There was a problem submitting your form";
+        }
+      })
+      .catch((error) => {
+        document.getElementById("form-message").innerHTML =
+          "Oops! There was a problem submitting your form";
+      });
+  });
