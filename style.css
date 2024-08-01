@@ -40,10 +40,9 @@ body {
 }
 
 .logo {
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--text-color);
   font-weight: 800;
-  /* text-transform: uppercase; */
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -58,7 +57,7 @@ body {
 }
 
 .navbar a {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text-color);
   margin-left: 4rem;
   font-weight: 500;
@@ -592,7 +591,7 @@ span {
   font-size: 16px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1280px) {
   html {
     font-size: 55%;
   }
@@ -625,5 +624,161 @@ span {
 
   .footer {
     padding: 2rem 3%;
+  }
+}
+
+@media (max-width: 895px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    display: none;
+  }
+
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: white;
+  }
+
+  .home {
+    flex-direction: column-reverse;
+    margin: 5rem 4rem;
+    gap: 3rem;
+  }
+
+  .home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-self: center;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 8rem;
+    margin-top: 3rem;
+  }
+
+  .home-content p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .home-img img {
+    width: 55vw;
+    margin: 3rem 0;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+    padding: 10rem 9% 10rem;
+  }
+
+  .about .heading {
+    margin: 3rem 0;
+  }
+
+  .about-img img {
+    width: 50vw;
+  }
+
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+
+  .services-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .projects-box img {
+    min-width: 42rem;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+
+  .services-box {
+    grid-template-columns: repeat(1, 1fr);
+    min-width: 22rem;
+    padding: 20px;
+    margin: 0 -5rem;
+  }
+
+  .services-box i {
+    font-size: 5rem;
+  }
+
+  .services-box h3 {
+    font-size: 1rem;
+  }
+
+  .services-box p {
+    font-size: 1.5rem;
+  }
+
+  .projects-box img {
+    min-width: 22rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .home h1 {
+    font-size: 5rem;
+  }
+
+  .home h2 {
+    font-size: 2.5rem;
+  }
+
+  .home p {
+    padding: 10px;
+  }
+
+  .about-content p {
+    padding: 10px;
+  }
+
+  .about-content h3 {
+    padding: 10px;
+  }
+
+  .about-content h2 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-content a {
+    margin: 0 10px;
+  }
+
+  .footer li {
+    font-size: 2rem;
   }
 }
